@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Hind+Siliguri:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800;900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .hero-spin svg {
+    -webkit-animation: spinHero 25s linear infinite;
+    animation: spinHero 25s linear infinite;
+  }
+
+  @keyframes spinHero {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 95%;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply rounded-full bg-gradient-to-r from-orange-600 to-red-600 text-white;
+  }
+
+  .primary-gradient {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-600;
+  }
+}
+
+@layer utilities {
+  .container {
+    @apply max-w-[1150px];
+  }
+
+  .container-lg {
+    @apply max-w-[1100px];
+  }
+
+  .container-sm {
+    @apply max-w-[900px];
+  }
+}
