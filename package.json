@@ -2,8 +2,10 @@
   "devDependencies": {
     "tailwindcss": "^3.2.4"
   },
-
   "scripts": {
     "start": "npx tailwindcss -i ./src/index.css -o ./dist/output.css --watch"
+  },
+  "dependencies": {
+    "tw-elements": "^1.0.0-alpha13"
   }
 }

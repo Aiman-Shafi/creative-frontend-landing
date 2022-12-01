@@ -2,7 +2,7 @@
 module.exports = {
   darkMode: "class",
   mode: "jit",
-  content: ["./src/**/*.{html,js}"],
+  content: ['./src/**/*.{html,js}', './node_modules/tw-elements/dist/js/**/*.js'],
   theme: {
     fontFamily: {
       baloo: ['"Baloo Da 2"'],
@@ -11,5 +11,5 @@ module.exports = {
     },
     extend: {},
   },
-  plugins: [],
+  plugins: [require('tw-elements/dist/plugin')],
 };
