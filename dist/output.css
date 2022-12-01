@@ -644,6 +644,10 @@ video {
   margin-left: 0.5rem;
 }
 
+.mt-32{
+  margin-top: 8rem;
+}
+
 .inline-block{
   display: inline-block;
 }
@@ -803,6 +807,14 @@ video {
 
 .pt-\[10\%\]{
   padding-top: 10%;
+}
+
+.pt-32{
+  padding-top: 8rem;
+}
+
+.pt-28{
+  padding-top: 7rem;
 }
 
 .text-center{
