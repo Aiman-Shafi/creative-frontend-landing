@@ -152,7 +152,7 @@
         </div>
       </section>
 
-      <section class="container mx-auto px-2 h-[800px]">
+      <section class="container mx-auto px-2 mt-40 h-[600px]">
         <div class="md:flex gap-20">
           <div class="course__content">
             <h2 class="text-5xl font-[700] text-white leading-tight">
@@ -210,34 +210,36 @@
           <div class="course__card bg-gray-800 p-6 rounded-lg">
             <img src="images/creative-frontend.png" alt="" />
             <div
-              class="course__card--features my-7 flex gap-7 justify-center items-center"
+              class="course__card--features my-7 flex gap-6 justify-center items-center"
             >
               <div class="feature">
                 <i
-                  class="bx bx-video bg-purple-700 text-white p-2 rounded-lg"
+                  class="bx bx-video bg-gradient-to-r from-purple-700 to bg-purple-500 text-white p-2 rounded-lg"
                 ></i>
-                <span class="text-white text-sm ml-1">৪০+ লাইভ ক্লাস</span>
+                <span class="text-white text-lg ml-1">৪০+ লাইভ ক্লাস</span>
               </div>
               <div class="feature">
                 <i
-                  class="bx bx-support bg-purple-700 text-white p-2 rounded-lg"
+                  class="bx bx-support bg-gradient-to-r from-purple-700 to bg-purple-500 text-white p-2 rounded-lg"
                 ></i>
-                <span class="text-white text-sm ml-1"> ২৪/৭ সাপোর্ট</span>
+                <span class="text-white text-lg ml-1"> ২৪/৭ সাপোর্ট</span>
               </div>
               <div class="feature">
                 <i
-                  class="bx bx-book-content bg-purple-700 text-white p-2 rounded-lg"
+                  class="bx bx-book-content bg-gradient-to-r from-purple-700 to bg-purple-500 text-white p-2 rounded-lg"
                 ></i>
-                <span class="text-white text-sm ml-1"> ১২+ অ্যাসাইনমেন্ট</span>
+                <span class="text-white text-lg ml-1"> ১৪+ প্রোজেক্ট</span>
               </div>
             </div>
             <div class="course__card--price">
-              <h2 class="text-4xl font-[600] text-white ml-2">
+              <h2 class="text-5xl font-[600] text-orange-600 ml-2">
                 ৳ ৬,০০০
-                <span class="line-through text-xl font-[500]"> ৳৮,০০০</span>
+                <span class="line-through text-xl font-[500] text-white">
+                  ৳ ৮,০০০</span
+                >
               </h2>
 
-              <div class="course__card--price-extras">
+              <!-- <div class="course__card--price-extras mt-4">
                 <div>
                   <i
                     class="bx bxs-user text-lg bg-purple-700 text-white px-1 rounded-lg"
@@ -250,12 +252,74 @@
                   ></i>
                   <span class="text-white">৮৫০+ গুগোল রিভিউ </span>
                 </div>
-              </div>
+              </div> -->
+            </div>
+
+            <div class="align-middle">
+              <a
+                href="#"
+                class="btn-primary inline-block w-full text-center text-3xl py-3 mt-5 rounded-lg"
+                >Buy Now</a
+              >
             </div>
           </div>
         </div>
       </section>
+
+      <!-- course module -->
+      <section class="my-12">
+        <h2 class="text-5xl font-[700] text-white text-center leading-tight">
+          এই <span class="primary-gradient">কোর্সের</span> মধ্যে যা যা
+          <span class="primary-gradient">শিখানো</span> হবে-
+        </h2>
+
+        <div
+          class="module__section bg-gray-800 py-10 rounded-lg mt-12 max-w-[1000px] overflow-y-scroll mx-auto h-[600px]"
+        >
+          <!-- <div class="bg-gray-900 mx-auto w-10/12 py-4 px-2 rounded-md">
+            <span
+              ><i
+                class="bx bx-atom text-orange-600 inline-block px-2 text-xl"
+              ></i
+            ></span>
+            <h3 class="text-xl text-center text-white inline-block">
+              Episode 42 - Explore Frontend Resources | Be a Frontend Expert
+            </h3>
+          </div> -->
+        </div>
+      </section>
+
+      <!-- course project  -->
+      <section></section>
     </main>
     <footer></footer>
+
+    <script>
+      const module = document.querySelector(".module__section");
+      console.log(module);
+      const fetchModules = () => {
+        fetch("modules.json")
+          .then((res) => res.json())
+          .then((data) => {
+            data.forEach((modules) => {
+              console.log(modules.Modules);
+              module.innerHTML += `
+              <div class="bg-gray-900 mx-auto w-10/12 py-4 px-2 mt-4 rounded-md duration-500 hover:bg-gray-00 cursor-pointer">
+                <span
+                  ><i
+                    class="bx bx-atom text-orange-600 inline-block px-2 text-xl"
+                  ></i
+                ></span>
+                <h3 class="text-xl text-center text-white inline-block">
+                  ${modules.Modules}
+                </h3>
+            </div>
+              `;
+            });
+          });
+      };
+
+      fetchModules();
+    </script>
   </body>
 </html>
