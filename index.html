@@ -9,7 +9,7 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../dist/output.css" />
+    <link rel="stylesheet" href="dist/output.css" />
   </head>
   <body class="bg-gray-900 font-bangla px-2">
     <header>
@@ -17,7 +17,7 @@
         class="container mx-auto flex justify-between items-center py-4 px-2"
       >
         <div class="logo h-4 w-[200px]">
-          <img src="images/codemanbd.png" alt="CodemandBD" />
+          <img src="src/images/codemanbd.png" alt="CodemandBD" />
         </div>
         <div class="btn">
           <a href="#" class="inline-block mt-3 px-4 py-3 btn-primary"
@@ -208,7 +208,7 @@
             </div>
           </div>
           <div class="course__card bg-gray-800 p-6 rounded-lg">
-            <img src="images/creative-frontend.png" alt="" />
+            <img src="src/images/creative-frontend.png" alt="" />
             <div
               class="course__card--features my-7 flex gap-6 justify-center items-center"
             >
@@ -298,7 +298,7 @@
       const module = document.querySelector(".module__section");
       console.log(module);
       const fetchModules = () => {
-        fetch("modules.json")
+        fetch("src/modules.json")
           .then((res) => res.json())
           .then((data) => {
             data.forEach((modules) => {
